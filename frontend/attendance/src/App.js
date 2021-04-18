@@ -51,7 +51,7 @@ class Recognize extends React.Component {
         })
         .then((resp) => {
             console.log(resp);
-            if(resp.data.error==false)
+            if(resp.data.error===false)
                 this.setState({result: resp.data.data,status:false});
         }).catch((err) => {
             this.setState({status:false});
